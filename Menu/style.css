@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+.menu{
+	width:70px;
+	height:4px;
+	position:absolute;
+	background:#000;
+	top:100px;
+	left:400px;
+	border-radius:30px;	
+}
+
+.menu::before{
+	content:"";
+	width:70px;
+	height:4px;
+	position:absolute;
+	background:#000;
+	top:15px;
+	border-radius:30px;	
+}
+
+.menu::after{
+	content:"";
+	width:70px;
+	height:4px;
+	position:absolute;
+	background:#000;
+	top:30px;
+	border-radius:30px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+
+		.container {
+			cursor: pointer;
+			margin: 50px auto auto 30%;
+			opacity: .2;
+			transition: all .5s ease-in-out;
+			display: inline-block;
+		}
+		.container:hover {
+			opacity: 1;
+		}
+		.heart {
+			width: 80px;
+			height: 80px;
+			background: #FF0000FF;
+			border-radius: 15px;
+		}
+		.heart::before {
+			content: "";
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			margin-top: 55px;
+			margin-left: 21px;
+			background: #FF0000FF;
+			border-radius:10px 200px 10px 50px;
+			transform: rotate(-45deg);
+		}
+		.heart::after {
+			content: "1";
+			position: absolute;
+			margin-top: 21px;
+			margin-left: 50px;
+			font-size: 36px;
+			font-weight: 700;
+			color: white;
+			font-family: sans-serif;
+		}
+		.heart-symbl {
+			width: 22px;
+			height: 31px;
+			background: #FFF;
+			position: absolute;
+			margin-top: 25px;
+			margin-left: 13px;
+			border-radius: 100px 80px 100px 0px;
+			transform: rotate(-45deg);
+		}
+		.heart-symbl::before {
+			content: "";
+			position: absolute;
+			width: 22px;
+			height: 30px;
+			background: #FFF;
+			margin-top: 6px;
+			margin-left: 5px;
+			transform: rotate(90deg);
+			border-radius: 40px 70px 0px 100px;
+		}
+	</style>
+	<title>Like Heart</title>
+</head>
+<body>
+	<div class="container">
+		<div class="heart">
+		<i class="heart-symbl"></i>
+		</div>
+	</div>
+</body>
+</html>
