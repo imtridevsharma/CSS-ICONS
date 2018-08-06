@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+.copy {
+	width:100px;
+	height:100px;
+	border:4px solid lightgrey;
+	border-radius:2px;
+	position:absolute;
+	top:20px;
+	left:100px;	
+	cursor:pointer;
+}
+
+.copy::before {
+	content:"";
+	position:absolute;
+	width:90px;
+	height:90px;
+	border:4px solid lightgrey;
+	border-radius:2px;
+	background:white;	
+	top:20px;
+	left:40px;
+}
+
+span{
+	position:absolute;
+	left:170px;
+	top:90px;
+	font-size:24px;
+	font-family: sans-serif;	
+	color:lightgrey;
+	cursor:pointer;
+}
+
+span {
+	animation: shake 1s ease-in-out infinite;	
+}
+@keyframes shake {
+	0%{
+		top:89px;	
+	}
+	50%{
+		top:92px;	
+	}
+	100%{
+		top:89px;	
+	}
+}
