@@ -1,0 +1,87 @@
+<!--HTML FILE OF MUSTACHE-->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Mostache</title>
+</head>
+
+<body>
+<div class="mostache">
+</div>
+<div class="mouth"></div>
+</body>
+</html>
+<!------------------------------->
+
+<!--CSS FILE OF MUSTACHE-->
+@charset "utf-8";
+/* CSS Document */
+.mostache{
+	width:150px;
+	height:150px;
+	color:currentcolor;
+	left:350px;
+	border-radius:100%;
+	position:absolute;
+	box-shadow:
+	120px 210px 0 0 currentcolor,
+	240px 210px 0 0 currentcolor;
+}
+
+.mostache::before{
+	content:"";
+	position:absolute;
+	width:180px;
+	height:120px;
+	border-bottom:solid currentcolor 150px;	
+	border-radius:0 0 0 100%;
+	top:90px;
+	left:10px;
+	transform:rotate(-40deg);
+	transform-origin:right 180px;
+}
+
+.mostache::after{
+	content:"";
+	position:absolute;
+	width:180px;
+	height:120px;
+	border-bottom:solid currentcolor 150px;	
+	border-radius:0 0 100% 0;
+	top:90px;
+	left:320px;
+	transform:rotate(40deg);
+	transform-origin:left 180px;
+}
+
+.mostache:before {
+	animation: shakeLeft 1s ease-in-out infinite;	
+}
+.mostache:after {
+	animation: shakeRight 1s ease-in-out infinite;	
+}
+@keyframes shakeLeft {
+	0% {
+		transform:rotate(-40deg);	
+	}
+	50%{
+		transform:rotate(-30deg);	
+	}
+	100%{
+		transform:rotate(-40deg);	
+	}
+}
+@keyframes shakeRight {
+	0% {
+		transform:rotate(40deg);	
+	}
+	50%{
+		transform:rotate(30deg);	
+	}
+	100%{
+		transform:rotate(40deg);	
+	}
+}
+<!--END OF FILE----------------------------->
